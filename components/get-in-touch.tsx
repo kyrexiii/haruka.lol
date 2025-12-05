@@ -4,10 +4,10 @@ export default function GetInTouch() {
     { icon: "instagram", href: "https://instagram/krexyyy_", label: "Instagram" },
     { icon: "discord", href: "https://discord.com/NvW7JTmVD9", label: "Discord" },
   ]
-    {/*  { icon: "linkedin", href: "#", label: "LinkedIn" }, */}
+  {/*  { icon: "linkedin", href: "#", label: "LinkedIn" }, */ }
 
   return (
-    <section className="py-20 px-4 md:px-8 max-w-6xl mx-auto">
+    <section id="contact" className="py-20 px-4 md:px-8 max-w-6xl mx-auto">
       {/* Heading */}
       <div className="mb-16">
         <h2 className="text-4xl font-bold mb-2">Let's Work Together</h2>

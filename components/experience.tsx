@@ -1,40 +1,40 @@
 export default function Experience() {
-const experiences = [
-  {
-    role: "Wannabe Coder (Class 10)",
-    company: "School Days",
-    period: "2022 - 2023",
-    highlights: [
-      "Started coding for the first time and got obsessed with JavaScript",
-      "Made Discord bots instead of studying (report card showed it)",
-      "Spent more time in VS Code than in textbooks",
-    ],
-  },
-  {
-    role: "Freelance Developer",
-    company: "Self-employed",
-    period: "2023 - Present",
-    highlights: [
-      "Building custom web apps using Next.js, Node.js and TypeScript",
-      "Working with clients and doing personal side projects",
-      "Improving clean code habits and real-world problem solving",
-    ],
-  },
-  {
-    role: "Self-taught Developer",
-    company: "Independent",
-    period: "2022 - Present",
-    highlights: [
-      "Learning modern web technologies on my own",
-      "Exploring networking, Linux, servers and backend systems",
-      "Gaining experience through experiments, projects and daily practice",
-    ],
-  },
-]
+  const experiences = [
+    {
+      role: "Wannabe Coder (Class 10)",
+      company: "School Days",
+      period: "2022 - 2023",
+      highlights: [
+        "Started coding for the first time and got obsessed with JavaScript",
+        "Made Discord bots instead of studying (report card showed it)",
+        "Spent more time in VS Code than in textbooks",
+      ],
+    },
+    {
+      role: "Freelance Developer",
+      company: "Self-employed",
+      period: "2023 - Present",
+      highlights: [
+        "Building custom web apps using Next.js, Node.js and TypeScript",
+        "Working with clients and doing personal side projects",
+        "Improving clean code habits and real-world problem solving",
+      ],
+    },
+    {
+      role: "Self-taught Developer",
+      company: "Independent",
+      period: "2022 - Present",
+      highlights: [
+        "Learning modern web technologies on my own",
+        "Exploring networking, Linux, servers and backend systems",
+        "Gaining experience through experiments, projects and daily practice",
+      ],
+    },
+  ]
 
 
   return (
-    <section className="py-20 px-4 md:px-8 max-w-6xl mx-auto">
+    <section id="experience" className="py-20 px-4 md:px-8 max-w-6xl mx-auto">
       <div className="mb-16">
         <h2 className="text-4xl font-bold mb-2">Experience</h2>
         <div className="w-12 h-1 bg-foreground"></div>

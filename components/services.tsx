@@ -50,7 +50,7 @@ const services: Service[] = [
 
 export default function Services() {
   return (
-    <section className="border-b border-border">
+    <section id="services" className="border-b border-border">
       <div className="max-w-7xl mx-auto px-6 py-24">
         <h2 className="text-xs font-semibold tracking-widest mb-16 text-muted-foreground">HERE'S HOW I CAN HELP YOU</h2>
 

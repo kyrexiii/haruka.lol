@@ -1,6 +1,6 @@
 export default function ProjectShowcase() {
   return (
-    <section className="py-24">
+    <section id="projects" className="py-24">
       <div className="max-w mx-auto px-6">
         <h2 className="text-xs font-semibold tracking-widest mb-16 text-muted-foreground">I'M CURRENTLY WORKING ON</h2>
 
