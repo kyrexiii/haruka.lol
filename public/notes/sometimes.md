@@ -21,8 +21,8 @@ i dont even know what i was trying to do today
 maybe stay busy maybe just pass the time
 
 coding helps but its not like before  
-earlier we both used to talk and do stuff together  
-now its like... silent project mode
+earlier things felt shared
+now it’s more like silent project mode
 
 i still opened vs code and tried building something  
 small idea nothing crazy  
