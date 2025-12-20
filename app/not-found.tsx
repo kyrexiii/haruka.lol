@@ -21,7 +21,7 @@ export default function NotFound() {
 
         {/* Description */}
         <p className="text-muted-foreground text-base md:text-lg max-w-md mx-auto">
-          The page you’re looking for doesn’t exist, was moved,
+          The page you're looking for doesn't exist, was moved,
           or is no longer available.
         </p>
 

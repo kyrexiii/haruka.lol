@@ -107,25 +107,55 @@ export default function Work() {
                         </div>
 
                         <div className="grid grid-cols-[80px_1fr] md:grid-cols-[100px_1fr] gap-2 md:gap-4">
-                            <span>capabilities:</span>
-                            <span className="min-w-0 break-words">
-                                filtering, batching, deduplication, multi-language support
-                            </span>
-                        </div>
-
-                        <div className="grid grid-cols-[80px_1fr] md:grid-cols-[100px_1fr] gap-2 md:gap-4">
                             <span>stack:</span>
                             <span className="min-w-0 break-words">TypeScript, Node.js</span>
                         </div>
 
                         <div className="grid grid-cols-[80px_1fr] md:grid-cols-[100px_1fr] gap-2 md:gap-4">
-                            <span>distribution:</span>
-                            <span className="min-w-0 break-words">npmjs.com/package/talkshitgetdared</span>
-                        </div>
-
-                        <div className="grid grid-cols-[80px_1fr] md:grid-cols-[100px_1fr] gap-2 md:gap-4">
                             <span>period:</span>
                             <span className="min-w-0 break-words">2025 — present</span>
+                        </div>
+
+                        {/* Capabilities section with improved layout */}
+                        <div className="pt-3 pb-2 space-y-1.5 border-t border-muted/10 mt-3">
+                            <div className="text-xs uppercase tracking-wide opacity-60">capabilities</div>
+                            <div className="flex flex-wrap gap-1.5">
+                                <span className="px-2 py-0.5 text-xs bg-muted/20 rounded border border-muted/30 whitespace-nowrap">
+                                    filtering
+                                </span>
+                                <span className="px-2 py-0.5 text-xs bg-muted/20 rounded border border-muted/30 whitespace-nowrap">
+                                    batching
+                                </span>
+                                <span className="px-2 py-0.5 text-xs bg-muted/20 rounded border border-muted/30 whitespace-nowrap">
+                                    deduplication
+                                </span>
+                                <span className="px-2 py-0.5 text-xs bg-muted/20 rounded border border-muted/30 whitespace-nowrap">
+                                    multi-language support
+                                </span>
+                            </div>
+                        </div>
+
+                        {/* Distribution section with link styling */}
+                        <div className="pt-2 space-y-1.5">
+                            <div className="text-xs uppercase tracking-wide opacity-60">distribution</div>
+                            <a
+                                href="https://npmjs.com/package/talkshitgetdared"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1.5 text-sm text-foreground/80 hover:text-foreground transition-colors group"
+                            >
+                                <span className="underline decoration-muted/40 group-hover:decoration-foreground/60 underline-offset-2">
+                                    npmjs.com/package/talkshitgetdared
+                                </span>
+                                <svg
+                                    className="w-3 h-3 opacity-40 group-hover:opacity-80 transition-opacity"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </a>
                         </div>
                     </div>
 
