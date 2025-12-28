@@ -1,7 +1,7 @@
 ---
 title: "haruka - who is this guy"
 description: "a tiny intro from a not-so-perfect dev"
-date: "2025-08-07"
+date: "2021-08-07"
 readTime: "4 min read"
 tags: ["about", "whoami", "real", "dev"]
 author: "haruka"

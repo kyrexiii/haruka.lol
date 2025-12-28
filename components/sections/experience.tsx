@@ -5,7 +5,7 @@ export default function Experience() {
                 <div>
                     <div className="text-foreground font-bold mb-1">[EXPERIENCE]</div>
                     <div className="pl-4 border-l border-muted/20 ml-1 space-y-1">
-                        <div>2023 — Present :: Independent Developer</div>
+                        <div>2021 — Present :: Independent Developer</div>
                         <div className="pl-4 text-muted-foreground/80">- Designed backend systems</div>
                         <div className="pl-4 text-muted-foreground/80">- Built APIs and internal tools</div>
                         <div className="pl-4 text-muted-foreground/80">- Worked close to infrastructure</div>

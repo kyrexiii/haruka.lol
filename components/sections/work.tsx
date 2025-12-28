@@ -6,13 +6,6 @@ const projects = [
         tech: "TypeScript, Next.js, Docker, PostgreSQL",
         state: "Stable",
     },
-    {
-        name: "Ayane",
-        description: "High-performance analytics dashboard for SaaS",
-        resp: "Full Stack Engineer",
-        tech: "React, Tailwind, Golang, ClickHouse",
-        state: "Active",
-    },
 ]
 
 export default function Work() {

@@ -24,7 +24,7 @@ export default function About() {
                     </div>
                     <div className="grid grid-cols-[80px_1fr] md:grid-cols-[100px_1fr] gap-2 md:gap-4">
                         <span>experience:</span>
-                        <span className="min-w-0 break-words">Independent development (2023 — present)</span>
+                        <span className="min-w-0 break-words">Independent development (2021 — present)</span>
                     </div>
                 </section>
 
@@ -111,7 +111,7 @@ export default function About() {
                 {/* Footer */}
                 <section className="pt-12 text-muted-foreground/50 text-xs">
                     <div className="font-bold mb-1">[END]</div>
-                    <div>last_updated: 2025-12-18</div>
+                    <div>last_updated: 2021-12-18</div>
                 </section>
             </div>
         </main>

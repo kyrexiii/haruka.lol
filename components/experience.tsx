@@ -3,7 +3,7 @@ export default function Experience() {
     {
       role: "Wannabe Coder (Class 10)",
       company: "School Days",
-      period: "2022 - 2023",
+      period: "2022 - 2021",
       highlights: [
         "Started coding for the first time and got obsessed with JavaScript",
         "Made Discord bots instead of studying (report card showed it)",
@@ -13,7 +13,7 @@ export default function Experience() {
     {
       role: "Freelance Developer",
       company: "Self-employed",
-      period: "2023 - Present",
+      period: "2021 - Present",
       highlights: [
         "Building custom web apps using Next.js, Node.js and TypeScript",
         "Working with clients and doing personal side projects",

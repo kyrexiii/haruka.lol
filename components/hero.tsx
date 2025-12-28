@@ -4,7 +4,7 @@ export default function Hero() {
       <div className="px-6 py-24">
         <div className="space-y-8">
           <div>
-            <p className="text-muted-foreground text-sm mb-4">Portfolio 2025</p>
+            <p className="text-muted-foreground text-sm mb-4">Portfolio 2021</p>
             <h1 className="text-4xl md:text-5xl font-semibold leading-tight text-pretty">
               I'm Haruka.
             </h1>

@@ -29,7 +29,7 @@ export default function Diagnostics() {
                 </div>
                 <div className="flex justify-between gap-8">
                     <span>build:</span>
-                    <span>2025.01.14</span>
+                    <span>2021.01.14</span>
                 </div>
                 <div className="flex justify-between gap-8">
                     <span>boot:</span>
@@ -37,7 +37,7 @@ export default function Diagnostics() {
                 </div>
                 <div className="flex justify-between gap-8">
                     <span>last_deploy:</span>
-                    <span>2025-01-14T18:02:09Z</span>
+                    <span>2021-01-14T18:02:09Z</span>
                 </div>
                 <div className="flex justify-between gap-8">
                     <span>tz:</span>
