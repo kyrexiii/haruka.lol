@@ -1,15 +1,48 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-mono: "Geist Mono", monospace;
-  --color-background: #0a0a0a;
-  --color-foreground: #ededed;
-  --color-muted: #888888;
+  --font-sans: "Geist", var(--default-font-family);
+  --font-mono: "Geist Mono", var(--default-mono-font-family);
+  --font-hand: var(--font-caveat), cursive;
+  --color-background: #0d0d0d;
+  --color-foreground: #f4f4f5;
+  --color-muted: #a1a1aa;
+  --color-muted-foreground: #71717a;
+  --color-card: #151515;
+  --color-card-border: #262626;
+  --color-accent: #262626;
+  --color-accent-foreground: #fafafa;
+
+  --animate-blob: blob 7s infinite;
+  --animate-blob-reverse: blob-reverse 10s infinite;
+  --animate-marquee: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(calc(-50% - 0.75rem)); }
+}
+
+@utility fade-x {
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+@keyframes blob-reverse {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(-30px, 50px) scale(1.2); }
+  66% { transform: translate(20px, -20px) scale(0.8); }
+  100% { transform: translate(0px, 0px) scale(1); }
 }
 
 @layer base {
   body {
-    @apply bg-background text-foreground font-mono antialiased;
-    /* Remove default scrollbar and use a slim one if possible, or just standard styling */
+    @apply bg-background text-foreground font-sans antialiased;
   }
 }
