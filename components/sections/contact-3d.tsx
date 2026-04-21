@@ -1,6 +1,6 @@
 "use client"
 
-import { Mail, Github, Twitter } from "lucide-react"
+import { Mail, Github, Instagram } from "lucide-react"
 import { motion, useSpring } from "framer-motion"
 import { useState } from "react"
 
@@ -61,14 +61,14 @@ export default function Contact3D() {
         </div>
 
         <div className="flex gap-4">
-          <a href="mailto:hello@haruka.lol" className="flex items-center gap-3 px-6 py-4 bg-foreground text-background hover:bg-foreground/90 transition-colors font-medium rounded-sm">
+          <a href="mailto:hi@haruka.lol" className="flex items-center gap-3 px-6 py-4 bg-foreground text-background hover:bg-foreground/90 transition-colors font-medium rounded-sm">
             <Mail className="w-4 h-4" /> <span className="text-xs uppercase tracking-widest font-mono font-bold">Say Hi</span>
           </a>
           <a href="https://github.com/haruka" className="flex items-center justify-center px-4 py-4 border border-foreground/10 text-foreground hover:bg-foreground/5 transition-colors rounded-sm">
             <Github className="w-4 h-4" />
           </a>
-          <a href="https://twitter.com/haruka" className="flex items-center justify-center px-4 py-4 border border-foreground/10 text-foreground hover:bg-foreground/5 transition-colors rounded-sm">
-            <Twitter className="w-4 h-4" />
+          <a href="https://www.instagram.com/kyrexiii/" className="flex items-center justify-center px-4 py-4 border border-foreground/10 text-foreground hover:bg-foreground/5 transition-colors rounded-sm">
+            <Instagram className="w-4 h-4" />
           </a>
         </div>
       </div>

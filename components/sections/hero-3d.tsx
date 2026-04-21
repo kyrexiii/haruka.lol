@@ -113,7 +113,7 @@ export default function Hero3D() {
     
     {/* INDEX + GITHUB REVEAL */}
     <a 
-      href="https://github.com/yourusername" 
+      href="https://github.com/kyrexiii" 
       target="_blank" 
       rel="noopener noreferrer"
       className="group flex items-center cursor-pointer hover:text-foreground transition-colors duration-200"
@@ -126,7 +126,7 @@ export default function Hero3D() {
 
     {/* SELECTED WORK + INSTAGRAM REVEAL */}
     <a 
-      href="https://instagram.com/yourusername" 
+      href="https://www.instagram.com/kyrexiii/" 
       target="_blank" 
       rel="noopener noreferrer"
       className="group flex items-center cursor-pointer hover:text-foreground transition-colors duration-200"

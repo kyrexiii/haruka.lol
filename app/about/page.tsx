@@ -16,7 +16,7 @@ export default function AboutPage() {
         <AboutPhilosophy />
         <AboutExpertise />
         
-        <Footer status="STATE: OPERATIONAL" />
+        <Footer />
       </div>
     </main>
   )

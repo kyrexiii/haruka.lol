@@ -1,7 +1,6 @@
 import { ThemeToggle } from "./theme-toggle";
 
 interface FooterProps {
-  status?: string;
   className?: string;
 }
 

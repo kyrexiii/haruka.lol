@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Haruka | Web Developer (but weirder)",
-    description: "17 and dangerously caffeinated. Building weird stuff with React 19 + Next.js 15.",
+    description: "19 and dangerously caffeinated. Building weird stuff with React 19 + Next.js 15.",
     url: "https://haruka.lol",
     siteName: "haruka.lol",
     locale: "en_US",
@@ -47,13 +47,14 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Haruka | Full-time dev, part-time chaos agent",
-    description: "17 and dangerously caffeinated. Building weird stuff with React 19 + Next.js 15.",
+    description: "19 and dangerously caffeinated. Building weird stuff with React 19 + Next.js 15.",
     creator: "@not_haruka",
   },
 }
 
 import { ThemeProvider } from "@/components/theme-provider"
 import { CommandPalette } from "@/components/command-palette"
+import { EasterEggAlert } from "@/components/easter-egg-alert"
 
 export default function RootLayout({
   children,
@@ -66,6 +67,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <Header />
           <CommandPalette />
+          <EasterEggAlert />
           {children}
           <Analytics />
         </ThemeProvider>

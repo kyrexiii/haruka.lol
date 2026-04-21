@@ -14,7 +14,7 @@ export default function ProjectsPage() {
         {/* Interactive Feed & Filters */}
         <ProjectsClient />
         
-        <Footer status="OUTPUT: INDEXED" />
+        <Footer />
       </div>
     </main>
   )
