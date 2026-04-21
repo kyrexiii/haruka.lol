@@ -4,18 +4,42 @@
   --font-sans: "Geist", var(--default-font-family);
   --font-mono: "Geist Mono", var(--default-mono-font-family);
   --font-hand: var(--font-caveat), cursive;
-  --color-background: #0d0d0d;
-  --color-foreground: #f4f4f5;
-  --color-muted: #a1a1aa;
-  --color-muted-foreground: #71717a;
-  --color-card: #151515;
-  --color-card-border: #262626;
-  --color-accent: #262626;
-  --color-accent-foreground: #fafafa;
+  --color-background: var(--bg);
+  --color-foreground: var(--fg);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-fg);
+  --color-card: var(--card);
+  --color-card-border: var(--card-border);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-fg);
 
   --animate-blob: blob 7s infinite;
   --animate-blob-reverse: blob-reverse 10s infinite;
   --animate-marquee: marquee 20s linear infinite;
+}
+
+@layer base {
+  :root {
+    --bg: #fdfdfd;
+    --fg: #0d0d0d;
+    --muted: #e4e4e7;
+    --muted-fg: #71717a;
+    --card: #f4f4f5;
+    --card-border: #e4e4e7;
+    --accent: #e4e4e7;
+    --accent-fg: #18181b;
+  }
+
+  .dark {
+    --bg: #0d0d0d;
+    --fg: #f4f4f5;
+    --muted: #27272a;
+    --muted-fg: #a1a1aa;
+    --card: #151515;
+    --card-border: #1f1f22;
+    --accent: #262626;
+    --accent-fg: #fafafa;
+  }
 }
 
 @keyframes marquee {
@@ -24,7 +48,7 @@
 }
 
 @utility fade-x {
-  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  mask-image: linear-gradient(to right, transparent, var(--bg) 15%, var(--bg) 85%, transparent);
 }
 
 @keyframes blob {
@@ -45,4 +69,26 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }
+}
+
+/* 1. Set the size of the scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+
+/* 2. Make it completely transparent by default */
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+/* 3. The class that JS will toggle when the mouse is near the edge */
+body.show-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #52525b; /* Tailwind zinc-600 */
+}
+
+/* Optional: Brighter when actively hovered/clicked */
+body.show-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #71717a; /* Tailwind zinc-500 */
 }

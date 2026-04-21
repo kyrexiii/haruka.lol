@@ -22,7 +22,7 @@ export default function BizCard3D() {
 
   return (
     <section 
-      className="bg-[#111111] border border-white/5 rounded-3xl md:rounded-[40px] p-8 md:p-32 overflow-hidden relative group/card flex flex-col items-center justify-center min-h-[700px]"
+      className="bg-[#111111] border border-foreground/5 rounded-3xl md:rounded-[40px] p-8 md:p-32 overflow-hidden relative group/card flex flex-col items-center justify-center min-h-[700px]"
       onMouseMove={handleMouseMove}
       onMouseLeave={() => { x.set(0); y.set(0) }}
       style={{ perspective: "1500px" }}
@@ -33,12 +33,12 @@ export default function BizCard3D() {
       <div className="text-purple-400 text-[11px] font-bold tracking-widest uppercase mb-16 text-center">CONTACT CARD</div>
       
       <motion.div 
-        className="w-full max-w-[500px] h-72 md:h-80 bg-[#151515] border border-white/[0.1] rounded-3xl p-8 shadow-[0_50px_100px_rgba(0,0,0,0.9),inset_0_2px_4px_rgba(255,255,255,0.05)] cursor-pointer relative overflow-hidden"
+        className="w-full max-w-[500px] h-72 md:h-80 bg-card border border-foreground/[0.1] rounded-3xl p-8 shadow-[0_50px_100px_rgba(0,0,0,0.9),inset_0_2px_4px_rgba(255,255,255,0.05)] cursor-pointer relative overflow-hidden"
         style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
       >
         {/* Holographic Shine Layer */}
         <motion.div 
-          className="absolute inset-0 bg-gradient-to-tr from-white/10 via-transparent to-white/10 opacity-40 pointer-events-none"
+          className="absolute inset-0 bg-gradient-to-tr from-foreground/10 via-transparent to-foreground/10 opacity-40 pointer-events-none"
           style={{ 
             x: useTransform(mouseXSpring, [-0.5, 0.5], [-100, 100]), 
             y: useTransform(mouseYSpring, [-0.5, 0.5], [-100, 100]) 
@@ -49,32 +49,32 @@ export default function BizCard3D() {
         <div className="relative z-10 w-full h-full flex flex-col justify-between">
            <div className="flex justify-between items-start">
               <div className="space-y-1">
-                 <h3 className="text-3xl font-bold text-white tracking-widest uppercase">Haruka</h3>
-                 <p className="text-white/40 text-[10px] font-mono tracking-widest uppercase">Member Since 2024</p>
+                 <h3 className="text-3xl font-bold text-foreground tracking-widest uppercase">Haruka</h3>
+                 <p className="text-foreground/40 text-[10px] font-mono tracking-widest uppercase">Member Since 2024</p>
               </div>
-              <div className="w-12 h-12 bg-[#1a1a1a] border border-white/10 rounded-2xl flex items-center justify-center">
-                 <ExternalLink className="w-5 h-5 text-white/50" />
+              <div className="w-12 h-12 bg-[#1a1a1a] border border-foreground/10 rounded-2xl flex items-center justify-center">
+                 <ExternalLink className="w-5 h-5 text-foreground/50" />
               </div>
            </div>
            
            <div className="flex justify-between items-end">
               <div className="space-y-4">
                  <div className="flex gap-4">
-                    <motion.div whileHover={{ scale: 1.1, translateZ: 20 }} className="text-white/40 hover:text-white transition-colors">
+                    <motion.div whileHover={{ scale: 1.1, translateZ: 20 }} className="text-foreground/40 hover:text-foreground transition-colors">
                        <Github size={20} />
                     </motion.div>
-                    <motion.div whileHover={{ scale: 1.1, translateZ: 20 }} className="text-white/40 hover:text-white transition-colors">
+                    <motion.div whileHover={{ scale: 1.1, translateZ: 20 }} className="text-foreground/40 hover:text-foreground transition-colors">
                        <Twitter size={20} />
                     </motion.div>
-                    <motion.div whileHover={{ scale: 1.1, translateZ: 20 }} className="text-white/40 hover:text-white transition-colors">
+                    <motion.div whileHover={{ scale: 1.1, translateZ: 20 }} className="text-foreground/40 hover:text-foreground transition-colors">
                        <Linkedin size={20} />
                     </motion.div>
                  </div>
-                 <div className="text-[9px] font-mono text-white/25 tracking-[0.3em] uppercase">Auth: 0xHYPER_3D_ACCESS</div>
+                 <div className="text-[9px] font-mono text-foreground/25 tracking-[0.3em] uppercase">Auth: 0xHYPER_3D_ACCESS</div>
               </div>
               <div className="text-right">
-                 <div className="text-xs font-bold text-white/40 uppercase tracking-widest">San Francisco</div>
-                 <div className="text-[10px] font-mono text-white/20">37.7749° N, 122.4194° W</div>
+                 <div className="text-xs font-bold text-foreground/40 uppercase tracking-widest">San Francisco</div>
+                 <div className="text-[10px] font-mono text-foreground/20">37.7749° N, 122.4194° W</div>
               </div>
            </div>
         </div>

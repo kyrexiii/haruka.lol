@@ -3,11 +3,13 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState, useRef } from "react"
-import { Menu } from "lucide-react"
+import { Menu, X } from "lucide-react"
+import { ThemeToggle } from "./theme-toggle"
 
 // Shows/hides the nav based on scroll direction — visible when scrolling up or near top
 export default function Header() {
   const [isVisible, setIsVisible] = useState(true)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const lastScrollY = useRef(0)
 
   useEffect(() => {
@@ -47,28 +49,47 @@ export default function Header() {
           <Link href="/about" className="px-4 py-2 text-foreground hover:text-muted-foreground transition-colors">
             About
           </Link>
-          <Link href="/notes" className="px-4 py-2 text-foreground hover:text-muted-foreground transition-colors">
-            Notes
+          <Link href="/work" className="px-4 py-2 text-foreground hover:text-muted-foreground transition-colors">
+            Work
           </Link>
           <Link href="/projects" className="px-4 py-2 text-foreground hover:text-muted-foreground transition-colors">
             Projects
           </Link>
-          <Link
-            href="mailto:hello@haruka.lol"
-            className="px-[18px] py-[10px] rounded-full text-foreground hover:bg-foreground hover:text-background transition-all duration-300"
+          <div className="h-4 w-px bg-foreground/10 mx-2" />
+          <ThemeToggle />
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 text-foreground hover:text-muted-foreground transition-colors ml-2"
           >
-            Contact
-          </Link>
+            Resume
+          </a>
         </div>
 
-        {/* Mobile hamburger — just shows the icon for now, full menu can be wired up later */}
+        {/* Mobile hamburger */}
         <div className="flex md:hidden items-center justify-end flex-1 pr-4">
           <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="p-2 text-foreground hover:text-muted-foreground transition-colors"
-            aria-label="Open menu"
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           >
-            <Menu className="w-6 h-6" />
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
+        </div>
+      </div>
+
+      {/* Mobile Dropdown */}
+      <div
+        className={`md:hidden absolute top-full left-0 w-full mt-4 transition-all duration-300 ease-in-out ${
+          isMenuOpen ? "opacity-100 translate-y-0 max-h-[400px]" : "opacity-0 -translate-y-4 max-h-0 overflow-hidden"
+        }`}
+      >
+        <div className="bg-background/90 backdrop-blur-xl rounded-[2rem] p-6 shadow-xl border border-foreground/5 flex flex-col gap-6 text-center">
+          <Link href="/about" onClick={() => setIsMenuOpen(false)} className="text-xl font-medium tracking-tight text-foreground hover:text-muted-foreground transition-colors">About</Link>
+          <Link href="/work" onClick={() => setIsMenuOpen(false)} className="text-xl font-medium tracking-tight text-foreground hover:text-muted-foreground transition-colors">Work</Link>
+          <Link href="/projects" onClick={() => setIsMenuOpen(false)} className="text-xl font-medium tracking-tight text-foreground hover:text-muted-foreground transition-colors">Projects</Link>
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="text-xl font-medium tracking-tight text-foreground hover:text-muted-foreground transition-colors">Resume</a>
         </div>
       </div>
     </nav>

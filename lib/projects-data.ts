@@ -1,5 +1,6 @@
 export interface Project {
   id: string
+  slug: string
   title: string
   description: string
   longDescription: string
@@ -13,6 +14,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "1",
+    slug: "talkshitgetdared",
     title: "TalkShitGetDared",
     description: "Open-source truth & dare package with custom prompts",
     longDescription:

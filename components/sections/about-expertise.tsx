@@ -14,8 +14,8 @@ export default function AboutExpertise() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   return (
-    <section className="w-full py-32 md:py-48 border-t border-white/5 mb-32 relative">
-      <div className="text-white/30 text-[10px] font-mono tracking-widest uppercase mb-16">
+    <section className="w-full pt-32 pb-16 md:pt-48 md:pb-24 border-t border-foreground/5 relative">
+      <div className="text-[10px] font-mono tracking-widest uppercase mb-16">
         [ 03_EXPERTISE_MATRIX ]
       </div>
       
@@ -27,7 +27,7 @@ export default function AboutExpertise() {
             return (
               <motion.div 
                 key={i} 
-                className="w-full group cursor-pointer border-b border-white/5 py-8 md:py-12 flex flex-col items-end text-right transition-colors hover:border-white/20"
+                className="w-full group cursor-pointer border-b border-foreground/5 py-8 md:py-12 flex flex-col items-end text-right transition-colors hover:border-foreground/20"
                 onMouseEnter={() => setHoveredIndex(i)}
                 onMouseLeave={() => setHoveredIndex(null)}
                 animate={{
@@ -37,14 +37,14 @@ export default function AboutExpertise() {
                 transition={{ type: "spring", stiffness: 150, damping: 20 }}
                 style={{ transformStyle: "preserve-3d" }}
               >
-                <div className="text-4xl md:text-6xl lg:text-[80px] font-medium tracking-tighter text-white/50 group-hover:text-white transition-colors duration-300">
+                <div className="text-4xl md:text-6xl lg:text-[80px] font-medium tracking-tighter text-foreground/50 group-hover:text-foreground transition-colors duration-300">
                   {layer.name}
                 </div>
                 
                 <motion.div 
                    initial={{ opacity: 0, height: 0 }}
                    animate={{ opacity: isHovered ? 1 : 0, height: isHovered ? 'auto' : 0 }}
-                   className="overflow-hidden mt-4 text-xs md:text-sm font-mono tracking-widest uppercase text-white/40"
+                   className="text-muted-foreground overflow-hidden mt-4 text-xs md:text-sm font-mono tracking-widest uppercase"
                 >
                    {layer.techs}
                 </motion.div>
@@ -52,7 +52,7 @@ export default function AboutExpertise() {
                 {/* Minimal 3D marker line */}
                 <motion.div 
                    animate={{ width: isHovered ? "100%" : "0%" }}
-                   className="h-px bg-white/30 absolute bottom-0 right-0 origin-right"
+                   className="h-px bg-foreground/30 absolute bottom-0 right-0 origin-right"
                    style={{ translateZ: "20px" }}
                 />
               </motion.div>

@@ -1,32 +1,14 @@
-import { Heart, Server, Cloud } from "lucide-react"
-import { SiNextdotjs, SiVercel, SiReact } from "react-icons/si"
+interface FooterProps {
+  status?: string;
+  className?: string;
+}
 
-export default function Footer() {
+export default function Footer({ className = "" }: FooterProps) {
   return (
-    <footer className="border-t border-border py-8 px-4 md:px-8">
-      <div className="max-w-6xl mx-auto text-center text-sm text-muted-foreground">
-        <p className="flex items-center justify-center gap-2 flex-wrap">
-          Built with
-
-          {/* React */}
-          <span className="inline-flex items-center gap-1">
-            <SiReact size={14} /> React 19.2
-          </span>
-
-          •
-
-          {/* Next.js */}
-          <span className="inline-flex items-center gap-1">
-            <SiNextdotjs size={14} /> Next.js 16
-          </span>
-
-          •
-
-          {/* Vercel */}
-          <span className="inline-flex items-center gap-1">
-            <SiVercel size={14} /> Vercel
-          </span>
-        </p>
+    <footer className={`w-full pt-12 pb-12 flex flex-col md:flex-row items-center md:items-start justify-between text-[10px] text-muted-foreground font-mono uppercase tracking-widest border-t border-foreground/5 ${className}`}>
+      <p>© {new Date().getFullYear()} Haruka.</p>
+      <div className="flex gap-8 mt-4 md:mt-0">
+         <span>BUILT WITH: NEXT.JS</span>
       </div>
     </footer>
   )

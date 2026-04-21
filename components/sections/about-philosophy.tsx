@@ -4,10 +4,26 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import React, { useRef } from "react"
 
 const principles = [
-  { id: "01", title: "Scalability First", desc: "Systems must thrive as domains scale, handling infinity with zero degradation." },
-  { id: "02", title: "Architectural Integrity", desc: "Clean architecture is not a preference; it is a long-term business strategy." },
-  { id: "03", title: "Vital Performance", desc: "A millisecond is the boundary between a conversion and a bounce." },
-  { id: "04", title: "Telemetry Driven", desc: "Decisions backed by exact data and telemetry, void of gut intuition." },
+  {
+    id: "01",
+    title: "Make it work first",
+    desc: "I care more about things actually working than looking impressive. If it runs well, I can improve it later."
+  },
+  {
+    id: "02",
+    title: "Don't overcomplicate",
+    desc: "Simple systems are easier to fix, scale, and understand. I try not to build things I can't explain later."
+  },
+  {
+    id: "03",
+    title: "Break → fix → learn",
+    desc: "Most of what I know comes from breaking stuff and figuring out why it failed."
+  },
+  {
+    id: "04",
+    title: "Performance matters (but not always first)",
+    desc: "I optimize when it actually matters, not just for numbers that no one will notice."
+  },
 ]
 
 export default function AboutPhilosophy() {
@@ -18,8 +34,8 @@ export default function AboutPhilosophy() {
   })
 
   return (
-    <section ref={containerRef} className="w-full py-32 md:py-48 border-t border-white/5">
-      <div className="text-white/30 text-[10px] font-mono tracking-widest uppercase mb-16">
+    <section ref={containerRef} className="w-full py-32 md:py-48 border-t border-foreground/5">
+      <div className="text-[10px] font-mono tracking-widest uppercase mb-16">
         [ 02_CORE_PHILOSOPHY ]
       </div>
       
@@ -47,7 +63,7 @@ export default function AboutPhilosophy() {
                 transformOrigin: "bottom"
               }}
             >
-              <div className="text-white/20 font-mono text-sm tracking-widest md:w-16 shrink-0">{p.id}</div>
+              <div className="font-mono text-sm tracking-widest md:w-16 shrink-0">{p.id}</div>
               <div className="flex flex-col gap-2">
                 <h3 className="text-3xl md:text-5xl font-medium tracking-tight text-foreground">{p.title}</h3>
                 <p className="text-muted-foreground text-sm md:text-base max-w-xl leading-relaxed">{p.desc}</p>

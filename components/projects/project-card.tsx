@@ -8,7 +8,7 @@ export interface ProjectCardProps {
   title: string
   description: string
   longDescription: string
-  year: string
+  year: number | string
   tags: string[]
   github?: string
   link?: string
@@ -31,7 +31,7 @@ export default function ProjectCard({
       whileHover={{ scale: 1.01, rotateX: 2 }}
       transition={{ type: "spring", stiffness: 200, damping: 20 }}
       style={{ transformStyle: "preserve-3d" }}
-      className="group relative border border-white/10 rounded-xl p-8 bg-background hover:bg-white/[0.02] transition-colors overflow-hidden"
+      className="group relative border border-foreground/10 rounded-xl p-8 bg-background hover:bg-foreground/[0.02] transition-colors overflow-hidden"
     >
        {/* Minimalist Tech Background Text on Hover */}
        <div className="absolute right-0 bottom-0 opacity-0 group-hover:opacity-5 transform translate-y-10 group-hover:translate-y-4 transition-all duration-500 pointer-events-none w-1/2 text-right overflow-hidden select-none">
@@ -49,7 +49,7 @@ export default function ProjectCard({
              </div>
              
              {project.status === "in-progress" && (
-                <div className="px-3 py-1 rounded-full border border-white/10 text-[10px] font-mono uppercase tracking-widest text-white/50">
+                <div className="px-3 py-1 rounded-full border border-foreground/10 text-[10px] font-mono uppercase tracking-widest text-foreground/50">
                   WIP / Active
                 </div>
              )}
@@ -61,7 +61,7 @@ export default function ProjectCard({
           </p>
 
           {/* Bottom Metabar */}
-          <div className="flex items-center justify-between pt-6 border-t border-white/5 mt-auto">
+          <div className="flex items-center justify-between pt-6 border-t border-foreground/5 mt-auto">
              <div className="flex flex-wrap gap-2 max-w-[70%]">
                 {project.tags.map(tag => {
                   const active = isSelected(tag);
@@ -72,7 +72,7 @@ export default function ProjectCard({
                         e.stopPropagation();
                         onTagClick(tag);
                       }}
-                      className={`px-2 py-1 rounded border text-[10px] uppercase font-mono tracking-widest transition-colors ${active ? "border-foreground text-background bg-foreground" : "border-white/10 text-muted-foreground hover:border-white/30 hover:text-white"}`}
+                      className={`px-2 py-1 rounded border text-[10px] uppercase font-mono tracking-widest transition-colors ${active ? "border-foreground text-background bg-foreground" : "border-foreground/10 text-muted-foreground hover:border-foreground/30 hover:text-foreground"}`}
                     >
                       {tag}
                     </button>

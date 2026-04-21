@@ -10,8 +10,9 @@ const _geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono
 const _caveat = Caveat({ subsets: ["latin"], variable: "--font-caveat" })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://haruka.lol"),
   title: "Haruka | Types Fast, Breaks Things Faster",
-  description: "Personal site of Haruka — 17 y/o web developer, dashboard enjoyer, part-time terminal goblin. Built with React 19 and Next.js 15 because stable is boring.",
+  description: "Personal site of Haruka — 19 y/o web developer, dashboard enjoyer, part-time terminal goblin. Built with React 19 and Next.js 15 because stable is boring.",
   keywords: [
     "Haruka", "web developer", "Next.js 15", "React 19", "dashboard dev", "terminal addict",
     "freelance", "JavaScript chaos", "coding while tired", "portfolio with vibes"
@@ -51,6 +52,9 @@ export const metadata: Metadata = {
   },
 }
 
+import { ThemeProvider } from "@/components/theme-provider"
+import { CommandPalette } from "@/components/command-palette"
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -59,9 +63,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${_geist.variable} ${_geistMono.variable} ${_caveat.variable} font-sans bg-background text-foreground antialiased relative`}>
-        <Header />
-        {children}
-        <Analytics />
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+          <Header />
+          <CommandPalette />
+          {children}
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   )
