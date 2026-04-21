@@ -2,6 +2,7 @@
 
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion"
 import React, { useEffect, useState } from "react"
+import { DigitalClock3D } from "@/components/ui/digital-clock"
 
 export default function Hero3D() {
   const [mounted, setMounted] = useState(false)
@@ -69,7 +70,7 @@ export default function Hero3D() {
               initial={{ opacity: 0, filter: "blur(10px)" }}
               animate={{ opacity: 1, filter: "blur(0px)" }}
               transition={{ duration: 1.2, ease: "easeOut" }}
-              className="text-zinc-50 text-7xl md:text-9xl font-medium tracking-[-0.04em] leading-tight"
+              className="text-7xl md:text-9xl font-medium tracking-[-0.04em] leading-tight"
             >
               Haruka S.
             </motion.h1>
@@ -95,6 +96,11 @@ export default function Hero3D() {
           </motion.div>
         </motion.div>
 
+        {/* 3D Clock Interface */}
+        <div className="flex-1 flex justify-center md:justify-end items-center">
+          <DigitalClock3D mouseXSpring={mouseXSpring} mouseYSpring={mouseYSpring} />
+        </div>
+
 
       </div>
 
@@ -102,14 +108,40 @@ export default function Hero3D() {
       <div className="absolute bottom-12 left-6 md:left-12 right-6 md:right-12 flex justify-between items-end pt-8">
 
 
-        <div className="flex flex-col items-end gap-2 text-[9px] font-mono tracking-widest uppercase">
-          <div className="flex gap-8">
-            <span className="hover:opacity-100 transition-opacity cursor-pointer">INDEX</span>
-            <span className="hover:opacity-100 transition-opacity cursor-pointer">SELECTED WORK</span>
-            <span>v{new Date().getFullYear()}.4</span>
-          </div>
-          <p>20.0059° N, 73.7915° E</p>
-        </div>
+<div className="flex flex-col items-end gap-2 text-[9px] font-mono tracking-widest uppercase text-muted-foreground">
+  <div className="flex gap-8">
+    
+    {/* INDEX + GITHUB REVEAL */}
+    <a 
+      href="https://github.com/yourusername" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="group flex items-center cursor-pointer hover:text-foreground transition-colors duration-200"
+    >
+      <span>INDEX</span>
+      <span className="ml-2 text-muted-foreground/60 opacity-0 translate-x-[-4px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200">
+        // GITHUB
+      </span>
+    </a>
+
+    {/* SELECTED WORK + INSTAGRAM REVEAL */}
+    <a 
+      href="https://instagram.com/yourusername" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="group flex items-center cursor-pointer hover:text-foreground transition-colors duration-200"
+    >
+      <span>SELECTED WORK</span>
+      <span className="ml-2 text-muted-foreground/60 opacity-0 translate-x-[-4px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200">
+        // INSTAGRAM
+      </span>
+    </a>
+
+    <span>v{new Date().getFullYear()}.4</span>
+  </div>
+  
+  <p>20.0059° N, 73.7915° E</p>
+</div>
       </div>
     </section>
   )

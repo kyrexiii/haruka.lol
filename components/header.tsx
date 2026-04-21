@@ -4,7 +4,6 @@ import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState, useRef } from "react"
 import { Menu, X } from "lucide-react"
-import { ThemeToggle } from "./theme-toggle"
 
 // Shows/hides the nav based on scroll direction — visible when scrolling up or near top
 export default function Header() {
@@ -56,7 +55,6 @@ export default function Header() {
             Projects
           </Link>
           <div className="h-4 w-px bg-foreground/10 mx-2" />
-          <ThemeToggle />
           <a
             href="/resume.pdf"
             target="_blank"

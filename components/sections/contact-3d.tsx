@@ -36,7 +36,7 @@ export default function Contact3D() {
         [ 03_CONTACT ]
       </div>
 
-      <div className="w-full flex justify-center overflow-hidden mb-16 select-none text-[#E6E6FA]">
+      <div className="w-full flex justify-center overflow-hidden mb-16 select-none">
          <motion.h2 
             className="text-[15vw] font-bold tracking-tighter leading-none cursor-default"
             style={{ filter: "url(#melt-filter)" }}

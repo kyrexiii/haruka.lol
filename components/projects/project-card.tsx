@@ -31,7 +31,7 @@ export default function ProjectCard({
       whileHover={{ scale: 1.01, rotateX: 2 }}
       transition={{ type: "spring", stiffness: 200, damping: 20 }}
       style={{ transformStyle: "preserve-3d" }}
-      className="group relative border border-foreground/10 rounded-xl p-8 bg-background hover:bg-foreground/[0.02] transition-colors overflow-hidden"
+      className="group relative  rounded-xl p-8 bg-background hover:bg-foreground/[0.02] transition-colors overflow-hidden"
     >
        {/* Minimalist Tech Background Text on Hover */}
        <div className="absolute right-0 bottom-0 opacity-0 group-hover:opacity-5 transform translate-y-10 group-hover:translate-y-4 transition-all duration-500 pointer-events-none w-1/2 text-right overflow-hidden select-none">

@@ -22,7 +22,7 @@ export const projects: Project[] = [
     tags: ["Node.js", "TypeScript", "JavaScript", "JSON"],
     link: "https://github.com/kyrexiii/TalkShitGetDared",
     github: "https://github.com/kyrexiii/TalkShitGetDared",
-    year: 2021,
+    year: 2025,
     status: "completed",
   },
 ]
