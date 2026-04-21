@@ -5,8 +5,8 @@ import { toast, Toaster } from "sonner"
 import { getRandomNotification } from "@/lib/data/notifications"
 import { AlertTriangle } from "lucide-react"
 
-const IDLE_TRIGGER_MS = 5000    // Temporary for testing (5 sec)
-const COOLDOWN_MS = 10000     // Temporary for testing (1 min)
+const IDLE_TRIGGER_MS = 60_000    // 1 minute
+const COOLDOWN_MS = 3_600_000     // 1 hour
 const STORAGE_KEY = "easter_egg_last_shown"
 
 function canShowNotification(): boolean {
