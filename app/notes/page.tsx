@@ -1,56 +1,60 @@
 import Link from "next/link"
 import { getAllNotes } from "@/lib/notes"
+import NotesList from "@/components/notes/notes-list"
+import { ChevronLeft } from "lucide-react"
 
 export const metadata = {
     title: "Notes · Haruka",
-    description: "Engineering notes and system logs.",
+    description: "Engineering notes, system logs, and shared knowledge.",
 }
 
 export default async function NotesIndex() {
     const notes = await getAllNotes()
 
     return (
-        <main className="min-h-screen p-6 md:p-12 lg:p-24 selection:bg-foreground selection:text-background font-mono text-sm md:text-base">
-            <div className="max-w-[800px] ml-[5%] md:ml-[10%] space-y-16 text-muted-foreground">
-
+        <main className="min-h-screen bg-background selection:bg-accent selection:text-accent-fg">
+            <div className="max-w-4xl mx-auto px-6 py-20 md:py-32">
+                
                 {/* Header */}
-                <section className="space-y-1">
-                    <div className="font-bold text-foreground">[NOTES]</div>
-                    <div>index: active_log</div>
-                </section>
-
-                {/* Notes Log */}
-                <section className="space-y-1">
-                    {notes.length === 0 ? (
-                        <div>[EMPTY] no_entries_found</div>
-                    ) : (
-                        notes.map((note) => (
-                            <Link
-                                key={note.slug}
-                                href={`/notes/${note.slug}`}
-                                className="block group hover:text-foreground transition-colors"
-                            >
-                                <span className="text-muted-foreground/50 mr-3 md:mr-6 shrink-0 inline-block min-w-[100px]">
-                                    [{new Date(note.date).toISOString().split('T')[0]}]
-                                </span>
-                                <span className="group-hover:underline decoration-muted-foreground/30 underline-offset-4">
-                                    {note.title.toLowerCase()}
-                                </span>
-                            </Link>
-                        ))
-                    )}
-                </section>
-
-                {/* Navigation */}
-                <section className="pt-12 text-muted-foreground/50 text-xs">
-                    <div className="font-bold mb-1">[DOCS]</div>
-                    <div className="flex gap-4">
-                        <Link href="/about" className="hover:text-foreground transition-colors">/about</Link>
-                        <span>·</span>
-                        <Link href="/" className="hover:text-foreground transition-colors">/</Link>
+                <header className="mb-16 md:mb-24 space-y-6">
+                    <Link 
+                        href="/" 
+                        className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors group"
+                    >
+                        <ChevronLeft className="w-3 h-3 transform group-hover:-translate-x-1 transition-transform" />
+                        Back to orbit
+                    </Link>
+                    
+                    <div className="space-y-4">
+                        <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground lowercase italic font-serif">
+                            Notes<span className="text-muted-foreground/30 font-sans not-italic">.</span>
+                        </h1>
+                        <p className="text-muted-foreground max-w-md leading-relaxed">
+this is basically my daily nonsense.
+if you're expecting something meaningful… good luck.
+i'm just documenting my existence at this point.
+                        </p>
                     </div>
+                </header>
+
+                {/* Notes List */}
+                <section>
+                    <NotesList notes={notes} />
                 </section>
 
+                {/* Footer Navigation */}
+                <footer className="mt-32 pt-8 border-t border-muted/10">
+                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 text-[10px] font-mono uppercase tracking-[0.2em] text-muted-foreground/50">
+                        <div className="flex gap-6">
+                            <Link href="/about" className="hover:text-foreground transition-colors">/about</Link>
+                            <Link href="/projects" className="hover:text-foreground transition-colors">/projects</Link>
+                            <Link href="/contact" className="hover:text-foreground transition-colors">/contact</Link>
+                        </div>
+                        <div>
+                            &copy; {new Date().getFullYear()} HARUKA_SYSTEMS
+                        </div>
+                    </div>
+                </footer>
             </div>
         </main>
     )
