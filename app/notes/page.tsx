@@ -22,7 +22,7 @@ export default async function NotesIndex() {
                         className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors group"
                     >
                         <ChevronLeft className="w-3 h-3 transform group-hover:-translate-x-1 transition-transform" />
-                        Back to orbit
+                        Back to home
                     </Link>
                     
                     <div className="space-y-4">
